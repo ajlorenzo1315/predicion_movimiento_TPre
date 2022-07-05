@@ -1,6 +1,6 @@
 # predicion_movimiento_TPre
 
-# deteccion
+# Deteccion
 ## OpenMMLab website mmdetection [[Ghithub]](https://github.com/open-mmlab/mmdetection/blob/master/)
 [![PyPI](https://img.shields.io/pypi/v/mmdet)](https://pypi.org/project/mmdet)
 [![docs](https://img.shields.io/badge/docs-latest-blue)](https://mmdetection.readthedocs.io/en/latest/)
@@ -17,9 +17,9 @@
 [🚀Ongoing Projects](https://github.com/open-mmlab/mmdetection/projects) |
 [🤔Reporting Issues](https://github.com/open-mmlab/mmdetection/issues/new/choose)
 
-seguimiento
+# Seguimiento
 
-# depth
+# Depth
 ## Global-Local Path Networks for Monocular Depth Estimation with Vertical CutDepth [[Paper]](https://arxiv.org/abs/2201.07436) [[Ghithub]](https://github.com/vinvino02/GLPDepth)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/global-local-path-networks-for-monocular/monocular-depth-estimation-on-nyu-depth-v2)](https://paperswithcode.com/sota/monocular-depth-estimation-on-nyu-depth-v2?p=global-local-path-networks-for-monocular)
@@ -39,3 +39,13 @@ seguimiento
 </a>
 </p>
 Thanks for the great Colab demo from NielsRogge
+
+# Prediccion
+
+# Instalaciones 
+
+Siga las guias de cada uno de los apartados que aporntan en su github
+
+# Training
+
+Habria que entrenear cada parte 
