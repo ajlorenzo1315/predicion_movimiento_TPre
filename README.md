@@ -9,4 +9,4 @@ deteccion
 [![license](https://img.shields.io/github/license/open-mmlab/mmdetection.svg)](https://github.com/open-mmlab/mmdetection/blob/master/LICENSE)
 [![open issues](https://isitmaintained.com/badge/open/open-mmlab/mmdetection.svg)](https://github.com/open-mmlab/mmdetection/issues)
 [![issue resolution](https://isitmaintained.com/badge/resolution/open-mmlab/mmdetection.svg)](https://github.com/open-mmlab/mmdetection/issues)
-[![github](https://github.com/open-mmlab/mmdetection)](https://github.com/open-mmlab/mmdetection)
+[![github](https://isitmaintained.com/badge/resolution/open-mmlab/mmdetection.svg](https://github.com/open-mmlab/mmdetection)
