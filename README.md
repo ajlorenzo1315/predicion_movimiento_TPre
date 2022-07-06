@@ -19,9 +19,11 @@
 
 ## SoloV2 [[Paper]](https://arxiv.org/abs/2003.10152) [[Github]](https://github.com/open-mmlab/mmdetection/edit/master/configs/solov2)
 
-<img src="assets/SOLOV2_arq.png" width="300"/>   <img src="assets/SOLOV2_arq_2.png" width="300"/>  <img src="assets/SOLOV2_coco.png" width="300"/>
+<img src="assets/SOLOV2_arq.png" width="400"/>   <img src="assets/SOLOV2_arq_2.png" width="400"/>  
+<p align="center"><img src="assets/SOLOV2_coco.png" width="300"/>
 
 #### SoloV2
+
 |  Backbone  |  Style  | MS train | Lr schd | Mem (GB) | mask AP |                                                    Config                                                     |                                                                                                                                                Download                                                                                                                                                |
 | :--------: | :-----: | :------: | :-----: | :------: | :-----: | :-----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |    R-50    | pytorch |    N     |   1x    |   5.1    |  34.8   |   [config](https://github.com/open-mmlab/mmdetection/tree/master/configs/solov2/solov2_r50_fpn_1x_coco.py)    |      [model](https://download.openmmlab.com/mmdetection/v2.0/solov2/solov2_r50_fpn_1x_coco/solov2_r50_fpn_1x_coco_20220512_125858-a357fa23.pth)           \| [log](https://download.openmmlab.com/mmdetection/v2.0/solov2/solov2_r50_fpn_1x_coco/solov2_r50_fpn_1x_coco_20220512_125858.log.json)      |
@@ -69,6 +71,7 @@
 
 
 # Depth
+
 ## Global-Local Path Networks for Monocular Depth Estimation with Vertical CutDepth [[Paper]](https://arxiv.org/abs/2201.07436) [[Ghithub]](https://github.com/vinvino02/GLPDepth)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/global-local-path-networks-for-monocular/monocular-depth-estimation-on-nyu-depth-v2)](https://paperswithcode.com/sota/monocular-depth-estimation-on-nyu-depth-v2?p=global-local-path-networks-for-monocular)
