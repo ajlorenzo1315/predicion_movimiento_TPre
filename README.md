@@ -19,7 +19,7 @@
 
 ## SoloV2 [[Paper]](https://arxiv.org/abs/2003.10152) [[Github]](https://github.com/open-mmlab/mmdetection/edit/master/configs/solov2)
 
-<img src="assets/SOLOV2_arq.png" width="400"/>   <img src="assets/SOLOV2_arq_2.png" width="400"/>  <img src="assets/SOLOV2_coco.png" width="400"/>
+<img src="assets/SOLOV2_arq.png" width="300"/>   <img src="assets/SOLOV2_arq_2.png" width="300"/>  <img src="assets/SOLOV2_coco.png" width="300"/>
 
 #### SoloV2
 |  Backbone  |  Style  | MS train | Lr schd | Mem (GB) | mask AP |                                                    Config                                                     |                                                                                                                                                Download                                                                                                                                                |
