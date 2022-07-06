@@ -17,7 +17,8 @@
 [🚀Ongoing Projects](https://github.com/open-mmlab/mmdetection/projects) |
 [🤔Reporting Issues](https://github.com/open-mmlab/mmdetection/issues/new/choose)
 
-### SoloV2 [[Paper]](https://arxiv.org/abs/2003.10152) [[Github]](https://github.com/open-mmlab/mmdetection/edit/master/configs/solov2)
+## SoloV2 [[Paper]](https://arxiv.org/abs/2003.10152) [[Github]](https://github.com/open-mmlab/mmdetection/edit/master/configs/solov2)
+
 <img src="assets/SOLOV2_arq.png" width="400"/>   <img src="assets/SOLOV2_arq_2.png" width="400"/>
 
 #### SoloV2
@@ -41,7 +42,7 @@
 
 # Seguimiento
 
-## ByteTrack [[paper]](https://arxiv.org/abs/2110.06864)[[Ghithub]](https://github.com/ifzhang/ByteTrack)
+## ByteTrack [[Paper]](https://arxiv.org/abs/2110.06864)[[Ghithub]](https://github.com/ifzhang/ByteTrack)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/bytetrack-multi-object-tracking-by-1/multi-object-tracking-on-mot17)](https://paperswithcode.com/sota/multi-object-tracking-on-mot17?p=bytetrack-multi-object-tracking-by-1)
 
