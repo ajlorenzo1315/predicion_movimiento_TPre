@@ -11,4 +11,4 @@
 
 # Monodethp
 
-<p align="center"><img src="comparative/comparative_monodepth/aproject2.avi" width="400"/></p>
+<p align="center"><img src="comparative/comparative_mono_depth/aproject2.avi" width="400"/></p>

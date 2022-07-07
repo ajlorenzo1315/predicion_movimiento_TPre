@@ -106,7 +106,7 @@ Thanks for the great Colab demo from NielsRogge
 # Prediccion
 
 
-## Social-Implicit: Rethinking Trajectory Prediction Evaluation and The Effectiveness of Implicit Maximum Likelihood Estimation, ECCV2022 [[Paper]](https://arxiv.org/abs/2203.03057)[[Demo interactiva]](ttps://www.abduallahmohamed.com/social-implicit-amdamv-adefde-demo) [[Github]](https://github.com/ajlorenzo1315/predicion_movimiento_TPre)
+## Social-Implicit: Rethinking Trajectory Prediction Evaluation and The Effectiveness of Implicit Maximum Likelihood Estimation, ECCV2022 [[Paper]](https://arxiv.org/abs/2203.03057) [[Demo_interactiva]](ttps://www.abduallahmohamed.com/social-implicit-amdamv-adefde-demo) [[Github]](https://github.com/ajlorenzo1315/predicion_movimiento_TPre)
 ### Abduallah Mohamed, Deyao Zhu, Warren Vu <br />
 ### Mohamed Elhoseiny* , Christian Claudel*
 ##### <sup>**</sup> Equal advising
