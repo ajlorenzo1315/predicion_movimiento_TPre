@@ -7,5 +7,5 @@ Nuestro enfoque combina varias técnicas de visión artificial para convertir un
 
 ## Demo 
 
-En el notebook inference_demo se realiza una demo explicada
+En el notebook prueba_modelo se realiza una demo explicada
 
