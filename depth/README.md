@@ -7,8 +7,7 @@
 
 # Midas v3
 
-<img src="comparative/comparative_midas/midas1.gif" width="400"/></p>
-<img src="comparative/comparative_midas/midas2.gif" width="400"/></p>
+<img src="comparative/comparative_midas/midas1.gif" width="400"/></p><img src="comparative/comparative_midas/midas2.gif" width="400"/></p>
 
 # Monodethp
 
