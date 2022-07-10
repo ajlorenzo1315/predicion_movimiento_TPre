@@ -1,5 +1,5 @@
 # GLP
-<p align="center"><img src="comparative/comparative_glp/GLP.avi" width="400"/></p>
+<p align="center"><img src="comparative/comparative_glp/GLP.gif" width="400"/></p>
 
 # DIFFnet
 
@@ -7,7 +7,8 @@
 
 # Midas v3
 
-<p align="center"><img src="comparative/comparative_midas/aproject2.avi" width="400"/></p>
+<img src="comparative/comparative_midas/midas1.gif" width="400"/></p>
+<img src="comparative/comparative_midas/midas2.gif" width="400"/></p>
 
 # Monodethp
 
