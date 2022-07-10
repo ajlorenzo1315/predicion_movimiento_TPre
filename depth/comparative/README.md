@@ -1,5 +1,5 @@
 # GLP
-<p align="center"><img src="comparative/comparative_glp/GLP.avi" width="400"/></p>
+<p align="center"><img src="comparative/comparative_glp/GLP.gif" width="400"/></p>
 
 # DIFFnet
 
