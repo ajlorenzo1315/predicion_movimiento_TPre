@@ -114,12 +114,6 @@ root
   $ python ./code/test.py --dataset imagepath --data_path <dir_to_imgs> --save_visualize
   ```
   
-- Inferencia de nuestro conjunto de datos
-  
-  ```
-  sh test_sample.sh
-  ```
-
   
 ### Train
 
