@@ -88,7 +88,7 @@
 
 <p align="center"><img src="assets/dethp_nyu.png" width="400"/></p>
 
-<p align="center"><img src="dethp/comparative/comparative_glp/GLP.gif" width="400"/></p>
+<p align="center"><img src="depth/comparative/comparative_glp/GLP.gif" width="400"/></p>
 
 ### Downloads
 - [[Downloads]](https://drive.google.com/drive/folders/17yYbLZS2uQ6UVn5ET9RhVL0y_X3Ipl5_?usp=sharing) Trained ckpt files for NYU Depth V2 and KITTI
