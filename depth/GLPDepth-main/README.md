@@ -113,6 +113,13 @@ root
   $ python ./code/test.py --dataset imagepath --data_path <dir_to_imgs> --save_visualize
   ```
   
+- Inference de nuestro data set
+  
+  ```
+  sh test_sample.sh
+  ```
+
+  
 ### Train
 
 for NYU Depth V2
