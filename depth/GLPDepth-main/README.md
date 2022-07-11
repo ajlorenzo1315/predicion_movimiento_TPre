@@ -4,9 +4,8 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/global-local-path-networks-for-monocular/monocular-depth-estimation-on-kitti-eigen)](https://paperswithcode.com/sota/monocular-depth-estimation-on-kitti-eigen?p=global-local-path-networks-for-monocular)
 
 ### Downloads
-- [[Downloads]](https://drive.google.com/drive/folders/17yYbLZS2uQ6UVn5ET9RhVL0y_X3Ipl5_?usp=sharing) Trained ckpt files for NYU Depth V2 and KITTI
-- [[Downloads]](https://drive.google.com/drive/folders/1LGNSKSaXguLTuCJ3Ay_UsYC188JNCK-j?usp=sharing) Predicted depth maps png files for NYU Depth V2 and KITTI Eigen split test set 
-
+- [[Downloads]](https://drive.google.com/drive/folders/17yYbLZS2uQ6UVn5ET9RhVL0y_X3Ipl5_?usp=sharing) Archivos ckpt capacitados para NYU Depth V2 y KITTI
+- [[Downloads]](https://drive.google.com/drive/folders/1LGNSKSaXguLTuCJ3Ay_UsYC188JNCK-j?usp=sharing)  Archivos png de mapas de profundidad pronosticados para NYU Depth V2 y KITTI Eigen split test set
 ### Google Colab
 
 <p>
@@ -14,7 +13,8 @@
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 </p>
-Thanks for the great Colab demo from NielsRogge
+
+Gracias por la gran demostración de Colab de NielsRogge
 
 ### Requirements
 Tested on 
@@ -30,16 +30,15 @@ albumentations=1.1.0
 tensorboardX==2.4.1
 gdown==4.2.1
 ```
-You can install above package with 
+**You can install above package with **
 ```
 $ pip install -r requirements.txt
 ```
 
-Or you can pull docker image with
+O puede extraer la imagen de la ventana acoplable con
 ```
 $ docker pull doyeon0113/glpdepth
 ```
-### Inference and Evaluate
 
 #### Dataset
 ###### NYU Depth V2
@@ -50,17 +49,19 @@ $ wget http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled
 $ python ../code/utils/extract_official_train_test_set_from_mat.py nyu_depth_v2_labeled.mat splits.mat ./nyu_depth_v2/official_splits/
 ```
 ###### KITTI
-Download annotated depth maps data set (14GB) from [[link]](http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction) into ./datasets/kitti/data_depth_annotated
+Descargue el conjunto de datos de mapas de profundidad anotados (14 GB) de [[link]](http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction) into ./datasets/kitti/data_depth_annotated
 ```
 $ cd ./datasets/kitti/data_depth_annotated/
 $ unzip data_depth_annotated.zip
 ```
+Con las dos instrucciones anteriores, puede realizar eval_with_pngs.py/test.py para NYU Depth V2 y eval_with_pngs para KITTI.
 
-With above two instrtuctions, you can perform eval_with_pngs.py/test.py for NYU Depth V2 and eval_with_pngs for KITTI.
 
-To fully perform experiments, please follow [[BTS]](https://github.com/cleinc/bts/tree/master/pytorch) repository to obtain full dataset for NYU Depth V2 and KITTI datasets.
+Para realizar experimentos completos, siga [[BTS]](https://github.com/cleinc/bts/tree/master/pytorch) repository to obtain full dataset for NYU Depth V2 and KITTI datasets.
 
-Your dataset directory should be
+
+Su directorio de conjunto de datos debe ser
+
 ```
 root
 - nyu_depth_v2
@@ -75,21 +76,21 @@ root
 ```
 
 
-#### Evaluation
+#### Evaluación
 
-- Evaluate with png images
+- Evaluar con imágenes png
 
-  for NYU Depth V2
+  NYU Depth V2
   ```
   $ python ./code/eval_with_pngs.py --dataset nyudepthv2 --pred_path ./best_nyu_preds/ --gt_path ./datasets/nyu_depth_v2/ --max_depth_eval 10.0 
   ```
-  for KITTI
+  KITTI
   ```
   $ python ./code/eval_with_pngs.py --dataset kitti --split eigen_benchmark --pred_path ./best_kitti_preds/ --gt_path ./datasets/kitti/ --max_depth_eval 80.0 --garg_crop
   ```
-- Evaluate with model (NYU Depth V2)
+- Evaluar con modelo (NYU Depth V2)
   
-  Result images will be saved in ./args.result_dir/args.exp_name (default: ./results/test)
+  Las imágenes resultantes se guardarán en./args.result_dir/args.exp_name (default: ./results/test)
    - To evaluate only
      ```
      $ python ./code/test.py --dataset nyudepthv2 --data_path ./datasets/ --ckpt_dir <path_for_ckpt> --do_evaluate  --max_depth 10.0 --max_depth_eval 10.0
@@ -99,21 +100,21 @@ root
      $ python ./code/test.py --dataset nyudepthv2 --data_path ./datasets/ --ckpt_dir <path_for_ckpt> --save_eval_pngs  --max_depth 10.0 --max_depth_eval 10.0
      ```         
     
-   - To save visualized depth maps
+   - Para guardar mapas de profundidad visualizados
      ```
      $ python ./code/test.py --dataset nyudepthv2 --data_path ./datasets/ --ckpt_dir <path_for_ckpt> --save_visualize  --max_depth 10.0 --max_depth_eval 10.0
      ```
     
-    In case of kitti, modify arguments to `--dataset kitti --max_depth 80.0 --max_depth_eval 80.0` and add `--kitti_crop [garg_crop or eigen_crop]`
+  En el caso de kitti, modifique los argumentos a `--dataset kitti --max_depth 80.0 --max_depth_eval 80.0` and add `--kitti_crop [garg_crop or eigen_crop]`
 
-#### Inference
+#### Inferencia
 
-- Inference with image directory
+- Inferencia con directorio de imágenes
   ```
   $ python ./code/test.py --dataset imagepath --data_path <dir_to_imgs> --save_visualize
   ```
   
-- Inference de nuestro data set
+- Inferencia de nuestro conjunto de datos
   
   ```
   sh test_sample.sh
