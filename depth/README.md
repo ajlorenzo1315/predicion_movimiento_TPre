@@ -23,6 +23,6 @@ Para realizar los test tambien utilizamos kitti.
 
 <p align="center"> <img src="comparative/comparative_midas/midas1.gif" width="400"/> <img src="comparative/comparative_midas/midas2.gif" width="400"/></p>
 
-# Monodethp
+# Monodepth
 
 <p align="center"><img src="comparative/comparative_mono_depth/mono.gif" width="400"/></p>
