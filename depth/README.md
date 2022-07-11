@@ -9,6 +9,8 @@ Pero en caso que se deseé realizarlo solo se ha de seguir las intruciones que a
 
 Por otro lado decidimos utilizar modelos que estubieran entrenados en kitti puesto que son imagenes similares a las que  se podrán encontrar en el entorno para el cual se planteó este problema, al ser tomadas desde un automovil. Tambien decidimos utilizar este data set pues aporta mucha información relevante además de ser altamente urilizado como test comparativo , lo cual nos ayudo en la decisión de selección del modelo.
 
+## Test
+Para realizar los test tambien utilizamos kitti.
 
 # GLP
 <p align="center"><img src="comparative/comparative_glp/GLP.gif" width="400"/></p>
