@@ -1,28 +1,14 @@
-### Predicción de profundidad
+### Detección y segmentación
 
-En este apartado decidimos utilizar un  predictor de profundidad para poder obterner la coordenada 
-
+En este apartado decidimos utilizar la libreria mmdetection pues nos permite utilizar diferentes detectores ya implementados para que saquen una salida similar sin tener que estar nosotros adaptando la misma
 ## Entrenamiento 
 
-Utilizamos los modelos preentrenados de los repositorios por incapacidad computacional para la lavor .
-Pero en caso que se deseé realizarlo solo se ha de seguir las intruciones que aparecen en los mismos.
+Utilizando los el dataset de coco se entrena cada modelo para una mayor explicación entrenarlos como recomiendan los autores de los mismos
 
-Por otro lado decidimos utilizar modelos que estubieran entrenados en kitti puesto que son imagenes similares a las que  se podrán encontrar en el entorno para el cual se planteó este problema, al ser tomadas desde un automovil. Tambien decidimos utilizar este data set pues aporta mucha información relevante además de ser altamente urilizado como test comparativo , lo cual nos ayudo en la decisión de selección del modelo.
+## comparativa .
+Utilizamos un vídeo que es similar al entorno en el que hemos planteado nuestro problema .
 
-## Test
-Para realizar los test tambien utilizamos kitti.
 
-# GLP
-<p align="center"><img src="comparative/comparative_glp/GLP.gif" width="400"/></p>
+<p align="center"><img src="comparative/comparative.gif" width="1920"/></p>
 
-# DIFFnet
 
-<p align="center"><img src="comparative/comparative_diff/diff.gif" width="400"/></p>
-
-# Midas v3
-
-<p align="center"> <img src="comparative/comparative_midas/midas1.gif" width="400"/> <img src="comparative/comparative_midas/midas2.gif" width="400"/></p>
-
-# Monodepth
-
-<p align="center"><img src="comparative/comparative_mono_depth/mono.gif" width="400"/></p>
