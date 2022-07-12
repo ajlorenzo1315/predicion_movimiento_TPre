@@ -17,6 +17,8 @@
 [🚀Ongoing Projects](https://github.com/open-mmlab/mmdetection/projects) |
 [🤔Reporting Issues](https://github.com/open-mmlab/mmdetection/issues/new/choose)
 
+<p align="center"><img src="assets/SOLOV2_cocot.png" width="500"/>
+
 ## SoloV2 [[Paper]](https://arxiv.org/abs/2003.10152) [[Github]](https://github.com/open-mmlab/mmdetection/edit/master/configs/solov2)
 
 <img src="assets/SOLOV2_arq.png" width="400"/>   <img src="assets/SOLOV2_arq_2.png" width="400"/>  
