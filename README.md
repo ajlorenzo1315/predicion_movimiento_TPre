@@ -81,7 +81,7 @@
 
 ### arquitectura
 
-<p align="center"><img src="assets/dethp_arq.png" width="400"/></p>
+<p align="center"><img src="assets/dethp_arq.png" width="400"/><img src="assets/glp_arq_2.png" width="400"/></p>
 
 ### Test KITTI
 <p align="center"><img src="assets/detph_kitti.png" width="400"/></p>
