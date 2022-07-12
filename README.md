@@ -20,7 +20,7 @@
 ## SoloV2 [[Paper]](https://arxiv.org/abs/2003.10152) [[Github]](https://github.com/open-mmlab/mmdetection/edit/master/configs/solov2)
 
 <img src="assets/SOLOV2_arq.png" width="400"/>   <img src="assets/SOLOV2_arq_2.png" width="400"/>  
-<p align="center"><img src="assets/SOLOV2_coco.png" width="300"/>
+<p align="center"><img src="assets/SOLOV2_coco.png" width="400"/><p align="center"><img src="assets/SOLOV2_coco2.png" width="400"/>
 
 #### SoloV2
 
