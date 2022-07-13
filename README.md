@@ -124,7 +124,7 @@ Thanks for the great Colab demo from NielsRogge
 
 # Instalaciones 
 
-Siga las guías de cada uno de los apartados del repositorio principal
+Siga las guías de cada uno de los apartados del repositorio principal.
 
 # Training
 
