@@ -1,7 +1,7 @@
 # predicion_movimiento_TPre
 
 # Deteccion
-## OpenMMLab website mmdetection [[Ghithub]](https://github.com/open-mmlab/mmdetection)
+## OpenMMLab website mmdetection [[Github]](https://github.com/open-mmlab/mmdetection)
 [![PyPI](https://img.shields.io/pypi/v/mmdet)](https://pypi.org/project/mmdet)
 [![docs](https://img.shields.io/badge/docs-latest-blue)](https://mmdetection.readthedocs.io/en/latest/)
 [![badge](https://github.com/open-mmlab/mmdetection/workflows/build/badge.svg)](https://github.com/open-mmlab/mmdetection/actions)
@@ -108,6 +108,7 @@ Thanks for the great Colab demo from NielsRogge
 
 # Prediccion
 
+## ICCV 2021: Where are you heading? Dynamic Trajectory Prediction with Expert Goal Examples [[Paper]](https://paperswithcode.com/paper/where-are-you-heading-dynamic-trajectory) [[GitHub]](https://github.com/JoeHEZHAO/expert_traj)
 
 ## Social-Implicit: Rethinking Trajectory Prediction Evaluation and The Effectiveness of Implicit Maximum Likelihood Estimation, ECCV2022 [[Paper]](https://arxiv.org/abs/2203.03057) [[Demo_interactiva]](ttps://www.abduallahmohamed.com/social-implicit-amdamv-adefde-demo) [[Github]](https://github.com/ajlorenzo1315/predicion_movimiento_TPre)
 ### Abduallah Mohamed, Deyao Zhu, Warren Vu <br />
@@ -117,14 +118,14 @@ Thanks for the great Colab demo from NielsRogge
 ### Modelo
 <img style="width: 60vw; height: auto;"  src="assets/Social-Implicit-Model.png"></img>
 
-### Perdida
+### Pérdida
 
 <img style="width: 60vw; height: auto;"  src="assets/Social-Loss.png"></img>
 
 # Instalaciones 
 
-Siga las guias de cada uno de los apartados que aporntan en su github
+Siga las guías de cada uno de los apartados del repositorio principal.
 
 # Training
 
-Habria que entrenear cada parte 
+Cada parte es entrenada individualmente siguiendo los principios expuestos en el paper del repositorio.
