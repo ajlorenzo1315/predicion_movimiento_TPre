@@ -108,6 +108,7 @@ Thanks for the great Colab demo from NielsRogge
 
 # Prediccion
 
+## ICCV 2021: Where are you heading? Dynamic Trajectory Prediction with Expert Goal Examples [[Paper]](https://paperswithcode.com/paper/where-are-you-heading-dynamic-trajectory) [[GitHub]](https://github.com/JoeHEZHAO/expert_traj)
 
 ## Social-Implicit: Rethinking Trajectory Prediction Evaluation and The Effectiveness of Implicit Maximum Likelihood Estimation, ECCV2022 [[Paper]](https://arxiv.org/abs/2203.03057) [[Demo_interactiva]](ttps://www.abduallahmohamed.com/social-implicit-amdamv-adefde-demo) [[Github]](https://github.com/ajlorenzo1315/predicion_movimiento_TPre)
 ### Abduallah Mohamed, Deyao Zhu, Warren Vu <br />
