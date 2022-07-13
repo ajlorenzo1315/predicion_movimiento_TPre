@@ -43,8 +43,13 @@ from timer import Timer
 
 class Me_model():
     
-    def __init__ (self,detector,depth,tracker,device=None):
-        
+    def __init__ (self,detector,depth,tracker,camera=[0,0,1],device=None,half_img_mm=True):
+        """
+        detector : argumentos detector
+        depth : argumentos depth
+        tracker :argumentos tracker
+        camera : punto de convergencia de lines de perpectiva
+        """
         torch.cuda.empty_cache() 
         # Cargamos los modelos necesarios
 
@@ -89,6 +94,45 @@ class Me_model():
         self.ags_tracker=tracker
         self.shape=(480,640)
 
+        self.pp=[camera[0],camera[1]]
+        self.valpix=camera[2]
+        self.half_img_mm=half_img_mm # lo hacemos si tomamos como referencia la mitad de la imagen para saber los metros en pixel
+
+
+    def pixel2realx(self,punto):
+        
+        punto[1]=self.pp[1]*2-punto[1]
+        pp=np.array(self.pp)
+        m=(punto[0]-pp[1])/(punto[0]-pp[0])
+        x=((-pp[1])/m)+pp[0]
+        #x=self.valpix*x
+        return x*(0.4*8/self.valpix)
+
+    def pixel2realhx(self,punto):
+        p=[punto[0],punto[1],1]
+        rows = self.shape[0]; cols = self.shape[1]
+        pts1 = np.float32([[0,250],[0,rows],[cols,250],[cols,rows]])
+        x = 195
+        pts2 = np.float32([[0,0],[x,rows],[cols,0],[cols-x,rows]])
+        #Se calcula la matriz para la corrección de perspectiva
+        M = cv2.getPerspectiveTransform(pts1,pts2)
+        #print(M)
+        pn=np.dot(M,p.T)
+        pn=[pn[0]/pn[2],pn[1]/pn[2]]
+
+        return (pn[0]-x)*(0.4*16/(cols-x-x))
+
+
+    def pixel2reald(self,punto,b = 57.66066148,w = -0.22307059):
+        #w = [[-0.22307059]], b = [57.66066148]
+        #b = 57.66066148
+        if punto>200:
+            return -w*punto+b
+        else:
+            w=-0.00185376
+            b=11.51382925
+            return -w*punto+b
+
     def plot_tracking(self,image, tlwhs, obj_ids, scores=None, frame_id=0, fps=0., ids2=None):
         im = np.ascontiguousarray(np.copy(image))
         im_h, im_w = im.shape[:2]
@@ -118,7 +162,7 @@ class Me_model():
             cv2.putText(im, id_text, (intbox[0], intbox[1]), cv2.FONT_HERSHEY_PLAIN, text_scale, (0, 0, 255),
                         thickness=text_thickness)
         return im
-
+    
     def pos_x_y_new(self,boxs,ids,masks,depth,depths,frame,view=True):
         if view:
 
@@ -129,7 +173,7 @@ class Me_model():
             self.shape=depth1.shape
 
         puntos=[]
-
+        puntos_real=[]
         cont_nop=0
     
         for idx_box in range(len(boxs)):
@@ -145,9 +189,18 @@ class Me_model():
         
             
             puntos.append((int( boxs[idx_box][0]+boxs[idx_box][2]//2) , int(depth*self.shape[0]/255) ) )
+
+            x_real=self.pixel2realx([ boxs[idx_box][0]+boxs[idx_box][2]//2,boxs[idx_box][3]] )
+            x_real_3=self.pixel2realhx([ boxs[idx_box][0]+boxs[idx_box][2]//2,boxs[idx_box][3]] )
+            puntos_real.append((int( x_real ) , int(depth),int(x_real_3) ) )
             if view:
                 str_save="\t".join([str(frame),str(ids[idx_box]),str(puntos[idx_box][0]),str(puntos[idx_box][1])])
+                dep_r=self.pixel2reald(puntos_real[idx_box][1])
+                str_save2="\t".join([str(frame),str(ids[idx_box]),str(puntos_real[idx_box][0]),str(puntos_real[idx_box][1]),str(punto),str(dep_r)])
+                str_save2="\t".join([str(frame),str(ids[idx_box]),str(puntos_real[idx_box][0]),str(puntos_real[idx_box][1]),str(punto),str(dep_r),str(puntos_real[idx_box][3])])
                 self.fichero.write(str_save + os.linesep)
+                self.fichero2.write(str_save2 + os.linesep)
+                self.fichero3.write(str_save3 + os.linesep)
             if view:
                 cv2.circle(imagen_view_new,(puntos[idx_box][0],puntos[idx_box][1]),10,(self.get_color(ids[idx_box])),-1)
           
@@ -169,6 +222,8 @@ class Me_model():
         os.makedirs(paths_out, exist_ok=True)
         if save:
             self.fichero = open(paths_out+'/mi_fichero', 'w')
+            self.fichero2 = open(paths_out+'/mi_ficheror', 'w')
+            self.fichero3 = open(paths_out+'/mi_ficheror2', 'w')
         timer = Timer()
         for idx, image_path in enumerate(paths):# Use the detector to do inference
         
@@ -177,6 +232,11 @@ class Me_model():
                 img= cv2.imread(image_path)
 
                 self.shape=img.shape
+                if idx==0:
+                    self.pp=[self.shape[1]//2,self.shape[0]//2]
+                    if self.half_img_mm:
+                        self.valpix=self.valpix/self.pp[0]
+                
                 if idx%1==0:
                     result=inference_detector(self.model, img)
                         
@@ -211,7 +271,7 @@ class Me_model():
                     normalizer = mpl.colors.Normalize(vmin=disp_resized_np.min(), vmax=vmax)
                     mapper = cm.ScalarMappable(norm=normalizer, cmap='magma')
                     colormapped_im = (mapper.to_rgba(disp_resized_np)[:, :, :3] * 255).astype(np.uint8)
-                    
+                   
 
                 if bboxes is not None:
                         if idx%1==0:
@@ -238,6 +298,7 @@ class Me_model():
                                     online_scores.append(t.score)
                                     online_mask.append(t.mask)
                                     online_depth.append(t.depth)
+                                    #print(np.max(np.array(online_depth)))
                                     
 
                         timer.toc()
@@ -274,8 +335,10 @@ class Me_model():
                     cv2.imwrite(name_dest_npy, online_im)
                    
                 print(" foto ",idx,"fps", 1. / max(1e-5, timer.average_time))
-    
+
+        self.fichero3.close()
         self.fichero.close()
+        self.fichero2.close()
     @staticmethod
     def gef_get_box(result):
         bbox_result,mask_result = result
