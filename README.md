@@ -1,4 +1,5 @@
-# predicion_movimiento_TPre
+# predicción_movimiento_TPre
+
 <p align="center"><img src="assets/esquema.PNG" width="1000"/></p>
 # Deteccion
 ## OpenMMLab website mmdetection [[Github]](https://github.com/open-mmlab/mmdetection)
